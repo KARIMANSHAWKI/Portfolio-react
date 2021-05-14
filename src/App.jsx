@@ -1,21 +1,23 @@
-import Topbar from './components/topbar/Topbar';
-import Intro from './components/intro/Intro';
-import Portofolio from './components/portofolio/Portofolio';
-import Works from './components/works/Works';
-import Contact from './components/contact/Contact';
-import './app.scss'
-import { useState } from 'react';
+import Topbar from "./components/topbar/Topbar";
+import Intro from "./components/intro/Intro";
+import Portofolio from "./components/portofolio/Portofolio";
+import Works from "./components/works/Works";
+import Contact from "./components/contact/Contact";
+import "./app.scss";
+import { useState } from "react";
+import Menu from "./components/menu/Menu";
 
 function App() {
-  const [menueOpen , setMenueOpen] = useState(false)
+  const [menueOpen, setMenueOpen] = useState(false);
   return (
     <div className="App">
-      <Topbar menueOpen= {menueOpen} setMenueOpen={setMenueOpen}  />
+      <Topbar menueOpen={menueOpen} setMenueOpen={setMenueOpen} />
+      <Menu   menueOpen={menueOpen} setMenueOpen={setMenueOpen} />
       <div className="sections">
-          <Intro />
-          <Portofolio />
-          <Works />
-          <Contact />
+        <Intro />
+        <Portofolio />
+        <Works />
+        <Contact />
       </div>
     </div>
   );
